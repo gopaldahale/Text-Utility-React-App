@@ -37,7 +37,7 @@ function App() {
           <Container>
             <Row>
               <Col lg={12} md={12} xs={12}>
-                <NavbarComponent title="Text Utility" pagename1="Home" pagename2="About" pagename3="Contact" pagename4="Services" href="www.trulms.com" number={10} />
+                <NavbarComponent title="Text Utility" pagename1="Home" pagename2="About" pagename3="Contact" pagename4="Services" href="/" number={10} />
                 
               </Col>
             </Row>
