@@ -10,11 +10,11 @@ import AboutComp from './components/AboutComp';
 import TypeWriter from './components/TypeWriter';
 import AlertNotify from './components/AlertNotify';
 import { useState } from 'react';
-import {
-  BrowserRouter as Router,
-  Routes,
-  Route
-} from "react-router-dom";
+// import {
+//   BrowserRouter as Router,
+//   Routes,
+//   Route
+// } from "react-router-dom";
 
 function App() {
   const [alert, setAlert] = useState(null);
@@ -31,7 +31,7 @@ function App() {
   }
 
   return (
-    <Router>
+    // <Router>
       <>
         <header className='header-section bg-light'>
           <Container>
@@ -45,7 +45,27 @@ function App() {
         </header>
 
         <AlertNotify alert={alert} />
+        <section className='typewriter-section'>
+          <Container>
+            <Row>
+              <Col lg={8} md={8} xs={12} className='m-auto my-5' >
+                <TypeWriter showAlertAttr={showAlert} />
+              </Col>
+            </Row>
+          </Container>
+        </section>
+        
+        <section className='contact-section'>
+          <Container>
+            <Row>
+              <Col lg={7} md={8} xs={12} className='m-auto my-5' >
+                <ContactComponent titleForContact='Contact From' />
+              </Col>
+            </Row>
+          </Container>
+        </section>
 
+     {/* 
         <Routes>
           <Route exact path='/' element={
             <section className='typewriter-section'>
@@ -67,7 +87,6 @@ function App() {
                 <Row>
                   <Col lg={7} md={8} xs={12} className='m-auto my-5' >
                     <ContactComponent titleForContact='Contact From' />
-                    {/* <ContactComponent/> */}
                   </Col>
                 </Row>
               </Container>
@@ -91,10 +110,10 @@ function App() {
 
           />
 
-        </Routes>
+        </Routes>  */}
 
       </>
-    </Router>
+    // </Router>
   );
 }
 

@@ -6,13 +6,14 @@ import NavDropdown from 'react-bootstrap/NavDropdown';
 import Button from 'react-bootstrap/Button';
 import Container from 'react-bootstrap/Container';
 import PropTypes from 'prop-types';
-import {Link} from 'react-router-dom'
+// import {Link} from 'react-router-dom'
 
 export default function NavbarCompFunc(propscallingName) {
   return (
     <Navbar expand="lg" className="bg-body-tertiary">
       <Container fluid>
-        <Link to="/" className='navbar-brand'>{propscallingName.title}</Link>
+        {/* <Link to="/" className='navbar-brand'>{propscallingName.title}</Link> */}
+        <Navbar.Brand href={propscallingName.href}>{propscallingName.title}</Navbar.Brand>
         <Navbar.Toggle aria-controls="navbarScroll" />
         <Navbar.Collapse id="navbarScroll">
           <Nav
@@ -20,9 +21,12 @@ export default function NavbarCompFunc(propscallingName) {
             style={{ maxHeight: '100px' }}
             navbarScroll
           >
-            <Link to="/" className='nav-link'> {propscallingName.pagename1} </Link>
+            {/* <Link to="/" className='nav-link'> {propscallingName.pagename1} </Link>
             <Link to="/about" className='nav-link'>{propscallingName.pagename2 }</Link>
-            <Link to="/contact" className='nav-link'>{propscallingName.pagename3 }</Link>
+            <Link to="/contact" className='nav-link'>{propscallingName.pagename3 }</Link> */}
+            <a href="#" className='nav-link'> {propscallingName.pagename1} </a>
+            <a href="#" className='nav-link'>{propscallingName.pagename2 }</a>
+            <a href="#" className='nav-link'>{propscallingName.pagename3 }</a>
             <NavDropdown title={propscallingName.pagename4 } id="navbarScrollingDropdown">
               <NavDropdown.Item href="#action3">Action</NavDropdown.Item>
               <NavDropdown.Item href="#action4">
