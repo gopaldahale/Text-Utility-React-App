@@ -24,20 +24,20 @@ export default function NavbarCompFunc(propscallingName) {
             {/* <Link to="/" className='nav-link'> {propscallingName.pagename1} </Link>
             <Link to="/about" className='nav-link'>{propscallingName.pagename2 }</Link>
             <Link to="/contact" className='nav-link'>{propscallingName.pagename3 }</Link> */}
-            <a href="#" className='nav-link'> {propscallingName.pagename1} </a>
-            <a href="#" className='nav-link'>{propscallingName.pagename2 }</a>
-            <a href="#" className='nav-link'>{propscallingName.pagename3 }</a>
+            <a href="/home" className='nav-link'> {propscallingName.pagename1} </a>
+            <a href="/home" className='nav-link'>{propscallingName.pagename2 }</a>
+            <a href="/home" className='nav-link'>{propscallingName.pagename3 }</a>
             <NavDropdown title={propscallingName.pagename4 } id="navbarScrollingDropdown">
-              <NavDropdown.Item href="#action3">Action</NavDropdown.Item>
-              <NavDropdown.Item href="#action4">
+              <NavDropdown.Item href="/home">Action</NavDropdown.Item>
+              <NavDropdown.Item href="/home">
                 Another action
               </NavDropdown.Item>
               <NavDropdown.Divider />
-              <NavDropdown.Item href="#action5">
+              <NavDropdown.Item href="/home">
                 Something else here
               </NavDropdown.Item>
             </NavDropdown>
-            <Nav.Link href="#" disabled>
+            <Nav.Link href="/home" disabled>
              {propscallingName.number}
             </Nav.Link>
           </Nav>
